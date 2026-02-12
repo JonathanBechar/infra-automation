@@ -1,10 +1,12 @@
 import logging
 from logging.handlers import RotatingFileHandler
+from pathlib import Path
 import sys
 
 
 logger = logging.getLogger(__name__)
 def setup_logging(__name__):
+    Path("logs").mkdir(exist_ok=True)
     logger.setLevel(logging.DEBUG)
     fmt = logging.Formatter("%(asctime)s %(levelname)s\t%(filename)s %(funcName)s - %(message)s")
     # File Handler
