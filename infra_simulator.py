@@ -4,15 +4,26 @@ from src.instance import Ec2Instances
 from src.save_data import append_instances
 from src.logger import setup_logging
 from pydantic import ValidationError
+from src.subproc import run_bash_script
+from argparse import ArgumentParser
+import json
 
 
 logger = setup_logging(__name__)
 
 
+def list_instances() -> list:
+    try:
+        with open("configs/instances.json") as f:
+            instances = json.load(f)
+            return instances
+    except json.JSONDecodeError as e:
+        logger.error(f"instances.json is not valid JSON: {e}")
+        return []
+
+
 def main_program():
-    print("before")
     input_data = get_user_input()
-    print("after")
     full_data = enrich_instance(input_data)
 
     try:
@@ -24,6 +35,24 @@ def main_program():
     append_instances(instance.model_dump(mode='json'))
     logger.info('Saved data to "configs/instances.json"')
 
-if __name__ == "__main__":
-        main_program()
+    run_bash_script()
 
+
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument("command", choices=["create", "list"], help="list - lists all saved instances. create - enables input for instance creation (default)", default="create", nargs="?")
+    parser.add_argument("--ids", help="lists instances by their InstanceId", nargs="*")
+    args = parser.parse_args()
+    print(args)
+        
+    if args.command == "create":
+        main_program()
+    
+    if args.command == "list":
+        instances = list_instances()
+        if args.ids:
+            ids = args.ids
+            ... # TODO
+        else:
+            for instance in instances:
+                print(instance)

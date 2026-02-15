@@ -61,7 +61,7 @@ def get_user_input() -> dict:
     
     except KeyboardInterrupt:
         logger.warning("User aborted the program")
-        exit("\nQuitting...")
+        exit("Quitting...")
     
     except ValueError as e:
         logger.error(f"Validation error in user input: {e}")
