@@ -1,4 +1,4 @@
-from logger import setup_logging
+from src.logger import setup_logging
 
 
 # --- LOGGER ---
@@ -41,7 +41,7 @@ def get_user_input() -> dict:
         logger.info(f"OS set: {instance_os}, ImageId={instance["ImageId"]}")
         logger.debug(f"ImageId chosen: {instance['ImageId']}")
     
-        # --- INSTANCETYPE
+        # --- INSTANCETYPE ---
         while True:
             print(
                 """Instances Types:
