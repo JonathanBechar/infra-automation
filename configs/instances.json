@@ -1,0 +1,41 @@
+[
+  {
+    "Name": "web-1",
+    "ImageId": "ami-0b6c6ebed2801a5cb",
+    "InstanceId": "i-bc6a5ff527a537022",
+    "PublicIpAddress": "34.96.102.160",
+    "InstanceType": "t2.micro",
+    "VpcId": "vpc-206ed915",
+    "SubnetId": "subnet-db207f1a",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    }
+  },
+  {
+    "Name": "web-2",
+    "ImageId": "ami-06b5375e3af24939c",
+    "InstanceId": "i-c5a9f1105d80c94b9",
+    "PublicIpAddress": "52.27.242.74",
+    "InstanceType": "t2.small",
+    "VpcId": "vpc-65cbfb92",
+    "SubnetId": "subnet-067edae0",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    }
+  },
+  {
+    "Name": "web-3",
+    "ImageId": "ami-0c1fe732b5494dc14",
+    "InstanceId": "i-a37d078e7490b00ec",
+    "PublicIpAddress": "3.218.211.211",
+    "InstanceType": "t2.medium",
+    "VpcId": "vpc-7f7a36fd",
+    "SubnetId": "subnet-5b6564b5",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    }
+  }
+]

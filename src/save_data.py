@@ -19,7 +19,7 @@ def load_instances() -> list[dict]:
             return []
         with open(file_path) as f:
             data = json.load(f)
-        logger.info(f"Loaded {len(data)} instances")
+        logger.debug(f"Loaded {len(data)} instances")
     
     except json.JSONDecodeError as e:
         logger.error(f"instances.json is not valid JSON: {e}")
@@ -38,7 +38,7 @@ def save_instances(instances: list[dict]):
         file_path.parent.mkdir(parents=True, exist_ok=True)
         with open(file_path, "w") as f:
             json.dump(instances, f, indent=2)
-        logger.info(f"Saved {len(instances)} instances")
+        logger.debug(f"Saved {len(instances)} instances")
     
     except Exception as e:
         logger.exception(f"Failed to save instances: {e}")
@@ -50,4 +50,4 @@ def append_instances(instance_dict: dict):
     instances = load_instances()
     instances.append(instance_dict)
     save_instances(instances)
-    logger.info(f"Appended instance: {instance_dict.get("InstanceId")}")
+    logger.info(f"Saved instance: {instance_dict.get("InstanceId")}")

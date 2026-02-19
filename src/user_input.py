@@ -55,7 +55,7 @@ def get_user_input() -> dict:
             else:
                 logger.warning("Unsupported instance type")
                 continue
-            logger.info("Instance data recieved")
+            logger.debug("Instance data recieved")
             logger.debug(f"Final instance dict: {instance}")
             return instance
     

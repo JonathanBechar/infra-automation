@@ -33,7 +33,7 @@ def main_program():
         return
     
     append_instances(instance.model_dump(mode='json'))
-    logger.info('Saved data to "configs/instances.json"')
+    logger.debug('Saved data to "configs/instances.json"')
 
     run_bash_script()
 
@@ -41,18 +41,12 @@ def main_program():
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("command", choices=["create", "list"], help="list - lists all saved instances. create - enables input for instance creation (default)", default="create", nargs="?")
-    parser.add_argument("--ids", help="lists instances by their InstanceId", nargs="*")
     args = parser.parse_args()
-    print(args)
         
     if args.command == "create":
         main_program()
     
     if args.command == "list":
         instances = list_instances()
-        if args.ids:
-            ids = args.ids
-            ... # TODO
-        else:
-            for instance in instances:
-                print(instance)
+        for instance in instances:
+            print(instance)

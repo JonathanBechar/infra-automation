@@ -1,0 +1,39 @@
+2026-02-19 11:15:11,427 ERROR	infra_simulator.py list_instances - instances.json is not valid JSON: Expecting value: line 1 column 1 (char 0)
+2026-02-19 11:15:20,621 ERROR	infra_simulator.py list_instances - instances.json is not valid JSON: Expecting value: line 1 column 1 (char 0)
+2026-02-19 11:15:53,728 INFO	user_input.py get_user_input - User input started
+2026-02-19 11:15:57,152 DEBUG	user_input.py get_user_input - Instance name set: web-1
+2026-02-19 11:16:10,225 WARNING	user_input.py get_user_input - Unsupported OS entered: linux
+2026-02-19 11:16:23,847 INFO	user_input.py get_user_input - OS set: linux, ImageId=ami-0b6c6ebed2801a5cb
+2026-02-19 11:16:23,847 DEBUG	user_input.py get_user_input - ImageId chosen: ami-0b6c6ebed2801a5cb
+2026-02-19 11:16:27,600 WARNING	user_input.py get_user_input - Unsupported instance type
+2026-02-19 11:16:32,425 INFO	user_input.py get_user_input - Instance data recieved
+2026-02-19 11:16:32,425 DEBUG	user_input.py get_user_input - Final instance dict: {'Name': 'web-1', 'ImageId': 'ami-0b6c6ebed2801a5cb', 'InstanceType': 't2.micro'}
+2026-02-19 11:16:32,427 ERROR	save_data.py load_instances - instances.json is not valid JSON: Expecting value: line 1 column 1 (char 0)
+2026-02-19 11:16:32,428 INFO	save_data.py save_instances - Saved 1 instances
+2026-02-19 11:16:32,428 INFO	save_data.py append_instances - Appended instance: i-bc6a5ff527a537022
+2026-02-19 11:16:32,428 INFO	infra_simulator.py main_program - Saved data to "configs/instances.json"
+2026-02-19 11:16:32,428 INFO	subproc.py run_bash_script - [DRY-RUN] Would run bash scripts/install_nginx.sh
+2026-02-19 11:19:17,641 INFO	user_input.py get_user_input - User input started
+2026-02-19 11:19:20,543 DEBUG	user_input.py get_user_input - Instance name set: web-2
+2026-02-19 11:19:25,477 INFO	user_input.py get_user_input - OS set: windows, ImageId=ami-06b5375e3af24939c
+2026-02-19 11:19:25,478 DEBUG	user_input.py get_user_input - ImageId chosen: ami-06b5375e3af24939c
+2026-02-19 11:19:35,111 INFO	user_input.py get_user_input - Instance data recieved
+2026-02-19 11:19:35,111 DEBUG	user_input.py get_user_input - Final instance dict: {'Name': 'web-2', 'ImageId': 'ami-06b5375e3af24939c', 'InstanceType': 't2.small'}
+2026-02-19 11:19:35,112 INFO	save_data.py load_instances - Loaded 1 instances
+2026-02-19 11:19:35,113 DEBUG	save_data.py save_instances - Saved 2 instances
+2026-02-19 11:19:35,113 INFO	save_data.py append_instances - Saved instance: i-c5a9f1105d80c94b9
+2026-02-19 11:19:35,113 DEBUG	infra_simulator.py main_program - Saved data to "configs/instances.json"
+2026-02-19 11:19:35,113 INFO	subproc.py run_bash_script - [DRY-RUN] Bash would run: bash scripts/install_nginx.sh
+2026-02-19 11:20:41,611 INFO	user_input.py get_user_input - User input started
+2026-02-19 11:20:44,669 DEBUG	user_input.py get_user_input - Instance name set: web-3
+2026-02-19 11:20:50,060 INFO	user_input.py get_user_input - OS set: linux, ImageId=ami-0c1fe732b5494dc14
+2026-02-19 11:20:50,061 DEBUG	user_input.py get_user_input - ImageId chosen: ami-0c1fe732b5494dc14
+2026-02-19 11:20:54,997 DEBUG	user_input.py get_user_input - Instance data recieved
+2026-02-19 11:20:54,997 DEBUG	user_input.py get_user_input - Final instance dict: {'Name': 'web-3', 'ImageId': 'ami-0c1fe732b5494dc14', 'InstanceType': 't2.medium'}
+2026-02-19 11:20:54,998 DEBUG	save_data.py load_instances - Loaded 2 instances
+2026-02-19 11:20:54,999 DEBUG	save_data.py save_instances - Saved 3 instances
+2026-02-19 11:20:54,999 INFO	save_data.py append_instances - Saved instance: i-a37d078e7490b00ec
+2026-02-19 11:20:54,999 DEBUG	infra_simulator.py main_program - Saved data to "configs/instances.json"
+2026-02-19 11:20:54,999 INFO	subproc.py run_bash_script - [DRY-RUN] Bash would run: bash scripts/install_nginx.sh
+2026-02-19 11:21:45,259 INFO	user_input.py get_user_input - User input started
+2026-02-19 11:21:46,424 WARNING	user_input.py get_user_input - User aborted the program

@@ -8,7 +8,7 @@ def run_bash_script(dry_run=True):
     command = ["bash", "scripts/install_nginx.sh"]
     try:
         if dry_run:
-            logger.info(f"[DRY-RUN] Would run {" ".join(command)}")
+            logger.info(f"[DRY-RUN] Bash would run: {" ".join(command)}")
         else:
             subprocess.run(command, check=True)
             logger.info("Nginx installation completed")
