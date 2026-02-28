@@ -31,7 +31,7 @@ It is recommended to run this project inside a virtual environment.
 ### Activate Environment:  
 
 In the command line:  
-Mac/Linux - $ source .venv/bin/activate
+Mac/Linux - $ source .venv/bin/activate  
 Windows - $ .venv\scripts\activate
 
 ### Install Dependencies:
