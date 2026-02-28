@@ -1,4 +1,4 @@
-# Infra Automation project
+# Infra Automation Project
 
 ### A simulated AWS EC2 provisioning tool built with python and bash
 
