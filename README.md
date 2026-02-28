@@ -8,7 +8,7 @@ All infrastructure data is stored locally in a JSON file.
 ## How to install
 
 In the command line:  
-git clone https://github.com/JonathanBechar/infra-automation
+$ git clone https://github.com/JonathanBechar/infra-automation
 
 ## How it works
 
